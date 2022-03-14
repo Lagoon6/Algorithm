@@ -1,16 +1,17 @@
 #BOJ 2108 Silver3
-from re import U
+import sys
 
 
-n = int(input())
+
+n = int(input()) #sys.stdin.readline()
 
 num_list = []
 for _ in range(n):
-    k = int(input())
+    k = int(input()) #sys.stdin.readline()
     num_list.append(k)
 
-'''
-class Stac:
+'''# class로 짜보기 -> 시간초과 
+class Stac: 
     def __init__(self):
         self.list = num_list
     
