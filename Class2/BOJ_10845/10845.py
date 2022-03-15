@@ -1,4 +1,5 @@
-#SILVER 4 #queue
+#SILVER 4 
+#queue
 import sys
 N = int(sys.stdin.readline())
 

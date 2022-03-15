@@ -1,4 +1,6 @@
-#SILVER 4 # Stack
+#SILVER 4 
+#Stack
+
 import sys
 
 N = int(sys.stdin.readline())
