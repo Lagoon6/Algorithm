@@ -1,16 +1,22 @@
+# 요세푸스 class 2
+# S4
+# list에서 제거X -> 뒤로 넘겨서 순서 지켜나가기
 import sys
-
-N = int(sys.stdin.readline())
-K = int(sys.stdin.readline())
-
-num_list = [ i+1 for i in range(N)]
+N,K = map(int,sys.stdin.readline().split())
 get_list = []
+num_list = [i+1 for i in range(N)]
 cnt = K-1
-while len(num_list)>0:
-    get_list.append(num_list.pop(cnt))
-    cnt = cnt + K
-    
 
-[1,2,3,4,5,6,7]
+while num_list:
+    for i in range(cnt):
+        num_list.append(num_list[0])
+        num_list.pop(0)
+    get_list.append(num_list.pop(0))
 
-    
+print("<",end="")
+for i in range(len(get_list)):
+    if i == len(get_list)-1:
+        print(str(get_list[i])+">",end="")
+    else:
+        print(str(get_list[i])+", ",end="")
+
